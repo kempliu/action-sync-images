@@ -22,4 +22,4 @@ jobs:
         logout: false
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
-        skopeo copy docker://docker.io/teddysun/kms:latest docker://docker://cnlk-docker.pkg.coding.net/apc/docker/kms:latest
+        skopeo copy docker://docker.io/teddysun/kms:latest docker://cnlk-docker.pkg.coding.net/apc/docker/kms:latest
