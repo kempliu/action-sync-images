@@ -23,4 +23,5 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         skopeo login -u docker-1718173689699 -p 2aaff651212ac624e8aa088902e138a4be9497e4 cnlk-docker.pkg.coding.net
-        skopeo copy docker://docker.io/teddysun/kms:latest docker://cnlk-docker.pkg.coding.net/apc/docker/kms:latest
+        skopeo copy docker://docker.io/teddysun/kms:latest docker://cnlk-docker.pkg.coding.net/common/registry//kms:latest
+        skopeo copy docker://docker.io/registry:latest docker://cnlk-docker.pkg.coding.net/common/registry//kms:latest
