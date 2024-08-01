@@ -1,4 +1,4 @@
-name: Sync Image to Aliyun  Example
+name: Sync Image to Coding
 on:
   push:
     branches: [ "main" ]
@@ -20,10 +20,10 @@ jobs:
     #     username: docker-1718173689699
     #     password: 2aaff651212ac624e8aa088902e138a4be9497e4
     #     logout: false
-    - name: Use Skopeo Tools Sync Image to Docker Hub
+    - name: Use Skopeo Tools Sync Image from Docker Hub
       run: |
         skopeo login -u docker-1718173689699 -p 2aaff651212ac624e8aa088902e138a4be9497e4 cnlk-docker.pkg.coding.net
         skopeo copy -a docker://docker.io/teddysun/kms:latest docker://cnlk-docker.pkg.coding.net/common/registry/kms:latest
         skopeo copy -a docker://docker.io/registry:latest docker://cnlk-docker.pkg.coding.net/common/registry/registry:latest
         skopeo copy docker://docker.io/ultralytics/ultralytics:latest docker://cnlk-docker.pkg.coding.net/common/registry/ultralytics:latest
-        skopeo copy -a docker://docker.io/ultralytics/ultralytics:latest-jetson-jetpack5 docker://cnlk-docker.pkg.coding.net/common/registry/ultralytics:latest-jetson-jetpack5
+        skopeo copy --override-arch arm64 docker://docker.io/ultralytics/ultralytics:latest-jetson-jetpack5 docker://cnlk-docker.pkg.coding.net/common/registry/ultralytics:latest-jetson-jetpack5
