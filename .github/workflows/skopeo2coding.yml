@@ -27,3 +27,4 @@ jobs:
         skopeo copy -a docker://docker.io/registry:latest docker://cnlk-docker.pkg.coding.net/common/registry/registry:latest
         skopeo copy docker://docker.io/ultralytics/ultralytics:latest docker://cnlk-docker.pkg.coding.net/common/registry/ultralytics:latest
         skopeo copy docker://docker.io/openvpn/openvpn-as:latest docker://cnlk-docker.pkg.coding.net/common/registry/openvpn-as:latest
+        skopeo copy docker://docker.io/ngoduykhanh/wireguard-ui:latest docker://cnlk-docker.pkg.coding.net/common/registry/wireguard-ui:latest
