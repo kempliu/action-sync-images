@@ -1,5 +1,4 @@
-name
-: Sync Image to Coding
+name: Sync Image to Coding
 on:
   push:
     branches: [ "main" ]
