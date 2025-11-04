@@ -33,8 +33,8 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.HP3060 }}" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
-        #ssh -o StrictHostKeyChecking=no lk@gxy.lqkp.ltd "touch fromGithubb"
+        #ssh  -f -L 5201:localhost:5201 -o StrictHostKeyChecking=no lk@gxy.lqkp.ltd -N
         sudo apt-get update       # 更新包列表
         sudo apt-get install -y iperf3
-        iperf3 -c gxy.lqkp.ltd
-        iperf3 -c gxy.lqkp.ltd -R
+        iperf3 -c localhost
+        #iperf3 -c gxy.lqkp.ltd -R
