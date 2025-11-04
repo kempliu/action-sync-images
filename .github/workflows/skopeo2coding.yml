@@ -33,4 +33,6 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.HP3060 }}" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
-        ssh -o StrictHostKeyChecking=no lk@gxy.lqkp.ltd "touch fromGithubb"
+        #ssh -o StrictHostKeyChecking=no lk@gxy.lqkp.ltd "touch fromGithubb"
+        iperf3 -c gxy.lqkp.ltd
+        iperf3 -c gxy.lqkp.ltd -R
